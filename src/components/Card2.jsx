@@ -8,7 +8,7 @@ const Card2 = () => {
   const [give, setGive] = useState([]);
   const fetchMovie = () => {
     axios
-      .get("http://localhost:3001/movie/viewall")
+      .get("https://movie-app-backend-s5np.onrender.com/movie/viewall")
       .then((response) => {
         const movies = response.data.movies;
         const lastMovie = movies[movies.length - 1];

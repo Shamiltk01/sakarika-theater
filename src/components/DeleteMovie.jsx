@@ -12,7 +12,7 @@ const DeleteMovie = () => {
 
   const handleDeleteMovie = () => {
     axios
-      .post("http://localhost:3001/movie/delete", input)
+      .post("https://movie-app-backend-s5np.onrender.com/movie/delete", input)
       .then((response) => {
         if (response.data.status === "success") {
           alert(response.data.message);

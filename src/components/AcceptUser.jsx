@@ -5,7 +5,7 @@ import Navi from "./Navi";
 const AcceptUser = () => {
   const [data, setData] = new useState([]);
   const getData = () => {
-    axios.get("http://localhost:3001/admin/viewallreq").then((response) => {
+    axios.get("https://movie-app-backend-s5np.onrender.com/admin/viewallreq").then((response) => {
       setData(response.data.userData);
     });
   };
@@ -14,13 +14,13 @@ const AcceptUser = () => {
   }, []);
 
   const rejectUser = (id) => {
-    axios.put(`http://localhost:3001/admin/reject/${id}`).then((response) => {
+    axios.put(`https://movie-app-backend-s5np.onrender.com/admin/reject/${id}`).then((response) => {
       alert(response.data.status);
       getData();
     });
   };
   const acceptUser = (id) => {
-    axios.put(`http://localhost:3001/admin/accept/${id}`).then((response) => {
+    axios.put(`https://movie-app-backend-s5np.onrender.com/admin/accept/${id}`).then((response) => {
       alert(response.data.status);
       getData();
     });
