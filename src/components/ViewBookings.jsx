@@ -17,7 +17,7 @@ const ViewBookings = () => {
       alert("please provide date and time");
     }
     axios
-      .post("https://movie-app-backend-s5np.onrender.com/booking/viewSeats", input)
+      .post("http://localhost:3001/booking/viewSeats", input)
       .then((response) => {
         setBookings(response.data.data);
       })

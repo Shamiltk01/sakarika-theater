@@ -8,7 +8,7 @@ const Card2 = () => {
   const [give, setGive] = useState([]);
   const fetchMovie = () => {
     axios
-      .get("https://movie-app-backend-s5np.onrender.com/movie/viewall")
+      .get("http://localhost:3001/movie/viewall")
       .then((response) => {
         const movies = response.data.movies;
         const lastMovie = movies[movies.length - 1];
@@ -23,7 +23,6 @@ const Card2 = () => {
         console.error("Error fetching movies:", error);
       });
   };
-  console.log(sessionStorage.getItem("movieId"))
   useEffect(() => {
     fetchMovie();
   }, []);

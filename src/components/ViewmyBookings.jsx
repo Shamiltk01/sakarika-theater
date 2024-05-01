@@ -16,19 +16,19 @@ const ViewmyBookings = () => {
 
   const fetchData = () => {
     axios
-      .post("https://movie-app-backend-s5np.onrender.com/user/viewMybookings", {
+      .post("http://localhost:3001/user/viewMybookings", {
         userId: sessionStorage.getItem("sessionId"),
       })
       .then((response) => {
         const responseData = response.data.data;
         const filteredData = responseData.map((booking) => ({
-          movie: booking.movieId.movieName,
+          movie: sessionStorage.getItem("movieName"),
           logname: booking.userId.logname,
           logemail: booking.userId.logemail,
           date: new Date(booking.date), // Parse date string to Date object
           time: booking.time,
           groundFloor: booking.groundFloor || "No ground seats booked",
-          balcony: booking.balcony || "No balcony seats booked",
+          balcony: booking.balcony || "No balcony seats booked"
         }));
         setBookingData(filteredData);
       })
