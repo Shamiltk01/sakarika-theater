@@ -9,7 +9,7 @@ const UserProfile = () => {
 
   const fetchData = () => {
     axios
-      .post("http://localhost:3001/user/viewMybookings", {
+      .post("https://movie-app-backend-1.onrender.com/user/viewMybookings", {
         userId: sessionStorage.getItem("sessionId"),
       })
       .then((response) => {
