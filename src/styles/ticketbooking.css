@@ -1,0 +1,102 @@
+/* Css for seat booking */
+
+.bodybooking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 50px 20px;
+  overflow-x:auto;
+}
+
+
+  
+  .h3booking {
+    text-align: center;
+    text-shadow: 0 0 1px #00b8f5;
+  }
+  
+  .h1booking {
+    text-align: center;
+    text-shadow: 0 0 3px #00b8f5;
+    
+  }
+  .dateandtime {
+    display: flex;
+    align-items: center;
+  }
+  
+  .containerbooking {
+    max-height: 180px;
+    overflow-y: auto;
+    overflow-x: auto;
+    max-width:100%;
+  }
+  
+  .sectionbooking {
+    display: flex;
+    
+  }
+  input[type="date"] {
+    height: 20px; /* Adjust the width as needed */
+  }
+  
+  .pathway {
+    width: 10px;
+    height: 30px;
+    background-color: #f39c12;
+  }
+  
+  .seat {
+    border: 2px solid #00b8f5;
+    flex-shrink: 0;
+    border-radius: 4px;
+    height: 32px;
+    width: 32px;
+    margin-right: 8px;
+    display: block;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 25px;
+    text-align: center;
+    color: var(--text-primary-strong);
+    cursor: pointer;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  .seat.selected {
+    background-color: #015113;
+  }
+  
+  .blank {
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+  }
+  
+  .button33 {
+    background-color: #00b8f5;
+    border-radius: 100px;
+    box-shadow: rgba(44, 58, 187, 0.2) 0 -25px 18px -14px inset, rgba(44, 56, 187, 0.15) 0 1px 2px, rgba(44, 56, 187, 0.15) 0 2px 4px, rgba(44, 56, 187, 0.15) 0 4px 8px, rgba(44, 56, 187, 0.15) 0 8px 16px, rgba(44, 56, 187, 0.15) 0 16px 32px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 250ms;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button33:hover {
+    box-shadow: rgba(44, 82, 187, 0.35) 0 -25px 18px -14px inset, rgba(51, 44, 187, 0.25) 0 1px 2px, rgba(51, 44, 187, 0.25) 0 2px 4px, rgba(51, 44, 187, 0.25) 0 4px 8px, rgba(51, 44, 187, 0.25) 0 8px 16px, rgba(51, 44, 187, 0.25) 0 16px 32px;
+    transform: scale(1.05) rotate(-1deg);
+  }
+  

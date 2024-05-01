@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+
+.logo {
+    width: 250px;
+    cursor: pointer;
+    position: static;
+}
+
+.navbar {
+    width: 85%;
+    height: 15%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    color: #fbfcfd;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-right: 50px;
+}
+
+button:hover {
+    background-color: #410c0c;
+    /* change to your desired color */
+    color: white;
+    /* change to your desired color */
+    ;
+}
+
+
+
+.content {
+    color: #fbfcfd;
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+h1 {
+    font-size: 50px;
+    margin: -50px 0 30px;
+    line-height: 60px;
+    font-family: "sans-serif";
+    font-weight: bold;
+    text-shadow: 2px 2px #000000;
+
+}
+
+h5 {
+    font-size: 20px;
+    margin: -50px 0 px;
+    line-height: 60px;
+    font-family: "sans-serif";
+    font-weight: bold;
+    text-shadow: 2px 2px #000000;
+
+}
+
+p {
+    font-size: 17px;
+    font-family: sans-serif;
+    text-shadow: 0.5px 0.5px antiquewhite;
+}
+
+.video-player {
+    margin-top: 50px;
+    position: absolute;
+    top: 70%;
+    left: 30%;
+
+}
+
+.movie-info {
+    font-size: 80px;
+    margin: 10px 0 30px;
+    line-height: 80px;
+    font-family: "sans-serif";
+    font-weight: bold;
+}
+
+.slide-bar {
+    width: 50px;
+    height: 100vh;
+    background: linear-gradient(#00545d, #000729);
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.menu {
+    display: block;
+    width: 25px;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+
+.social-links img,
+.useful-links img {
+    width: 25px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+
+.social-links {
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.useful-links {
+    width: 50px;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+}
+
+.bubbles img {
+    width: 50px;
+    animation: bubble 7s linear infinite;
+}
+
+.bubbles {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -70px;
+}
+
+@keyframes bubble {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    50% {
+
+        opacity: 1;
+    }
+
+    70% {
+
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+
+}
+
+.bubbles img:nth-child(1) {
+    width: 25px;
+    animation-delay: 2s;
+}
+
+.bubbles img:nth-child(2) {
+    width: 20px;
+    animation-delay: 1s;
+}
+
+.bubbles img:nth-child(3) {
+    width: 25px;
+    animation-delay: 3.2s;
+}
+
+.bubbles img:nth-child(4) {
+    width: 20px;
+    animation-delay: 6s;
+}
+
+.bubbles img:nth-child(5) {
+    width: 25px;
+    animation-delay: 4s;
+}
+
+.bubbles img:nth-child(6) {
+    width: 20px;
+    animation-delay: 5.4s;
+}
+
+.bubbles img:nth-child(7) {
+    width: 25px;
+    animation-delay: 4.9s;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .slide-bar {
+        width: 100%;
+        height: 50px;
+        top: auto;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    .social-links {
+        width: auto;
+        position: unset;
+        transform: none;
+    }
+
+    .useful-links {
+        width: auto;
+        position: unset;
+    }
+
+    .menu {
+        width: 18px;
+        margin: 0;
+    }
+
+    .hero {
+        background-image: url(../images/small-background.png);
+
+    }
+
+    .trailer-container {
+        position: relative;
+        width: 85%;
+        height: 550px;
+        margin: 0 auto;
+        top: 100%;
+        transform: translateY(-50%);
+    }
+
+    /* Add this style to prevent the iframe from capturing pointer events */
+    .trailer-container iframe {
+        pointer-events: none;
+        /* Prevent pointer events on the iframe */
+        color: transparent;
+        /* Make the text inside the iframe transparent */
+    }
+}
+
+.hero.trailer-playing .content {
+    color: transparent;
+}
+
+.movie-poster {
+    width: 300px;
+    /* Adjust the width of the poster */
+    height: auto;
+    /* Maintain aspect ratio */
+    margin-right: 20px;
+    /* Add margin to separate poster from movie details */
+}
+
+/* Adjust the movie details layout */
+.movie-details {
+    display: flex;
+    align-items: center;
+    /* Align items vertically */
+}
+
+.movie-info {
+    color: #fff;
+    text-align: left;
+    margin-left: px;
+    /* Add margin to separate movie poster from movie details */
+}
+
+.movie-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.movie-info button {
+    margin-top: 180px;
+    /* Add margin to separate buttons from movie details */
+}

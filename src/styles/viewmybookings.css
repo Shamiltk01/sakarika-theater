@@ -1,0 +1,74 @@
+.view-my-bookings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh; /* Use min-height to ensure the container expands with content */
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #0c0000; /* Set a consistent background color */
+  overflow-y: auto; /* Allow vertical scrolling if content exceeds viewport height */
+}
+
+.booking-card {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  margin-top: 70px;
+  text-align: center;
+  width: 80%; /* Optionally adjust the width */
+  max-width: 400px; /* Set maximum width for responsiveness */
+  height: 500px; /* Let the height adjust based on content */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.booking-card h2 {
+  color: #000; /* Set text color to black */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.booking-card p {
+  color: #000; /* Set text color to black */
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.qr-code-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qr-code-container > svg {
+  width: 200px;
+  height: 200px;
+  /* Customize QR code appearance */
+}
+
+.download-button {
+  margin-top: 20px; /* Adjust spacing */
+  padding: 10px 20px;
+  margin-left: 40px;
+  background-color: black;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button {
+  position: absolute;
+  top: 20px; /* Adjust top position */
+  left: 20px; /* Adjust left position */
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
