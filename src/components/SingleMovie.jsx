@@ -143,7 +143,7 @@ const SingleMovie = () => {
 
   const handleSubmit=()=>{
     axios
-      .post("http://localhost:3001/booking/viewSeats", input)
+      .post("https://movie-app-backend-1.onrender.com/booking/viewSeats", input)
       .then((response) => {
         if (response.data.status === "success") {
           sessionStorage.setItem("movieDate",input.date)
