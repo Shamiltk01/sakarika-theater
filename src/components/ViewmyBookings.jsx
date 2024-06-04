@@ -16,7 +16,7 @@ const ViewmyBookings = () => {
 
   const fetchData = () => {
     axios
-      .post("https://movie-app-backend-1.onrender.com/user/viewMybookings", {
+      .post("http://localhost:3001/user/viewMybookings", {
         userId: sessionStorage.getItem("sessionId"),
       })
       .then((response) => {

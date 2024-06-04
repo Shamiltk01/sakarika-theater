@@ -629,7 +629,7 @@ const TicketBooking = () => {
       sessionStorage.setItem("balconySeats", balcony.join(","));
 
       axios
-        .post("https://movie-app-backend-1.onrender.com/booking/book", {
+        .post("http://localhost:3001/booking/book", {
           userId: sessionStorage.getItem("sessionId"),
           date: sessionStorage.getItem("movieDate"),
           time: sessionStorage.getItem("movieTime"),
@@ -695,7 +695,7 @@ const TicketBooking = () => {
 
   const fetchSeats = () => {
     axios
-      .post("https://movie-app-backend-1.onrender.com/booking/viewSeats", {
+      .post("http://localhost:3001/booking/viewSeats", {
         date: sessionStorage.getItem("movieDate"),
         time: sessionStorage.getItem("movieTime"),
       })

@@ -143,7 +143,7 @@ const SingleMovie = () => {
 
   const handleSubmit=()=>{
     axios
-      .post("https://movie-app-backend-1.onrender.com/booking/viewSeats", input)
+      .post("http://localhost:3001/booking/viewSeats", input)
       .then((response) => {
         if (response.data.status === "success") {
           sessionStorage.setItem("movieDate",input.date)
@@ -159,12 +159,13 @@ const SingleMovie = () => {
     <div className={`hero ${isTrailerPlaying ? "trailer-playing" : ""}`}>
       <div className="navbar">
         <Link to="/">
-          <img src={logo} alt="" className="logo" />
+          <img src={logo} alt="" className="logotheatre" />
         </Link>
         {loggedIn && sessionId ? (
-           <div>
+           <div className="profilebtn">
            <button
              type="button"
+             className="buttonprofile"
              onClick={() => {
                handleProfileClick();
              }}
@@ -173,6 +174,7 @@ const SingleMovie = () => {
            </button>
            <button
              type="button"
+             className="buttonprofile"
              onClick={() => {
                logout();
              }}
@@ -182,23 +184,23 @@ const SingleMovie = () => {
          </div>
         ) : (
           <Link to="/signin">
-            <button type="button">Login / Register</button>
+            <button className="buttonprofile" type="button">Login / Register</button>
           </Link>
         )}
       </div>
-      <div className="content">
+      <div className="mov">
         {movieDetails && !isTrailerPlaying && (
           <div className="movie-details">
+            <div className="movieposter">
             <img
               src={`https://image.tmdb.org/t/p/original${movieDetails.poster_path}`}
               alt={movieDetails.title}
               className="movie-poster"
             />
-
-            <div className="movie-info">
-              <div
-                className="dateandtime"
-                style={{ paddingBottom: "40px", display: "flex" }}
+</div>
+            <div
+                className="dateandtime" 
+                
               >
                 <input
                   type="date"
@@ -210,12 +212,14 @@ const SingleMovie = () => {
                   className="form-control"
                   style={{
                     width: "140px",
-                    height: "60px",
+                    height: "40px",
                     backgroundColor: "#f0f0f0",
                     border: "1px solid #ccc",
                     borderRadius: "5px",
                     padding: "5px 10px",
                     marginBottom: "20px",
+                    
+                    
                   }}
                 />
                 <select
@@ -225,8 +229,8 @@ const SingleMovie = () => {
                   id=""
                   className="form-control"
                   style={{
-                    width: "140px",
-                    height: "60px",
+                    width: "135px",
+                    height: "40px",
                     marginLeft: "40px",
                     marginBottom: "20px",
                   }}
@@ -239,7 +243,10 @@ const SingleMovie = () => {
                 </select>
               </div>
 
+            <div className="movie-info">
+             
               <h1>
+                <br></br>
                 {movieDetails.title} ({movieDetails.release_date.split("-")[0]})
               </h1>
               <p>
@@ -283,8 +290,9 @@ const SingleMovie = () => {
               </button>
             </div>
           </div>
+          
         )}
-      </div>
+     
 
       {trailerUrl && (
         <div className="trailer-container">
@@ -299,6 +307,7 @@ const SingleMovie = () => {
           ></iframe>
         </div>
       )}
+    </div>
     </div>
   );
 };

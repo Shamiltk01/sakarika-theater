@@ -14,7 +14,7 @@ const SigninSignUp = () => {
     setInput({ ...input, [e.target.name]: e.target.value });
   };
   const signUpGet = () => {
-    axios.post("https://movie-app-backend-1.onrender.com/user/signup", input).then((response) => {
+    axios.post("http://localhost:3001/user/signup", input).then((response) => {
       alert(response.data.status);
       setInput({
         logname: "",
@@ -25,7 +25,7 @@ const SigninSignUp = () => {
   };
 
   const signInGet = () => {
-    axios.post("https://movie-app-backend-1.onrender.com/user/signin", input).then((response) => {
+    axios.post("http://localhost:3001/user/signin", input).then((response) => {
       if (response.data.status === "user success") {
         sessionStorage.setItem("sessionId", response.data.userData._id);
         navigate("/smovie");

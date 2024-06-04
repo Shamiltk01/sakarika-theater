@@ -12,7 +12,7 @@ const AdimAdd = () => {
     setInput({ ...input, [event.target.name]: event.target.value });
   };
   const readValues = () => {
-    axios.post("https://movie-app-backend-1.onrender.com/movie/add", input).then((response) => {
+    axios.post("http://localhost:3001/movie/add", input).then((response) => {
       alert(response.data.status);
       setInput({
         upcomingMovie: "",
